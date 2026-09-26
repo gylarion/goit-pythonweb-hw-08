@@ -15,3 +15,6 @@ class Contact(Base):
     email: Mapped[str] = mapped_column(String(100), unique=True, index=True)
     phone: Mapped[str] = mapped_column(String(30))
     birthday: Mapped[date] = mapped_column(Date)
+    additional_data: Mapped[str | None] = mapped_column(
+        String(255), nullable=True
+    )
